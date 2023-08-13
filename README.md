@@ -17,6 +17,30 @@ or
 python -m pip install pymysql
 ```
 
+## Initialize the Database
+
+```
+CREATE DATABASE quiz_system;
+
+USE quiz_system;
+
+CREATE TABLE questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question_text TEXT,
+    option1 TEXT,
+    option2 TEXT,
+    option3 TEXT,
+    option4 TEXT,
+    correct_option INT
+);
+
+CREATE TABLE quiz_results (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(50),
+    score INT
+);
+```
+
 ## Instructions
 
 - After installing the needed libraries. Edit the `data.csv` file to load the questions and its answers.
